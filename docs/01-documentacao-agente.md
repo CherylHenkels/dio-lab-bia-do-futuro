@@ -5,38 +5,39 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+Muitas pessoas têm dificuldade para controlar seus gastos, não sabendo exatamente para onde o dinheiro está indo. Essa falta de controle sobre as despesas pode levar a decisões financeiras ruins, como gastar mais do que se ganha.
+
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+O agente rastreia os gastos do usuário, classifica as despesas em categorias e identifica padrões de consumo. Além disso, ele gera insights e alertas que ajudam o usuário a compreender melhor seus hábitos financeiros, aumentando sua consciência sobre os gastos e apoiando decisões mais informadas.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+Pessoas que têm dificuldade para controlar, organizar e compreender seus gastos.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+Fiscal da fatura 🕵🏻
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+Consultivo
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+Acessível e informal
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
+- Saudação: [ex: "Oi! Eu sou o Fiscal da Fatura 🕵🏻. Vamos ver no que você andou gastando?"]
+- Confirmação: [ex: "Entendi! Deixa eu analisar isso para você."]
 - Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
 
 ---
@@ -47,22 +48,23 @@
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
-    D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
+    A["Usuário"] -->|Mensagem| B["Interface Visual (chat)"]
+    B --> C["LLM"]
+    C --> |Busca| D["Base de Conhecimento"]
+    D --> |Retorna dados| C
+    C --> |Analisa dados| E["Resposta"]
 ```
 
 ### Componentes
 
+`TODO: Definir os componentes`
+
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | [Streamlit/ widgets] |
+| LLM | [GPT-4 / Llama] |
+| Base de Conhecimento | [JSON/CSV com dados do cliente] |
+| Validação | [Checagem de alucinações] |
 
 ---
 
@@ -73,9 +75,15 @@ flowchart TD
 - [ ] [ex: Agente só responde com base nos dados fornecidos]
 - [ ] [ex: Respostas incluem fonte da informação]
 - [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [ ] [ex: Não faz recomendações de investimento]
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+- Recomendações de gastos
+- Recomendações de investimentos
+- Não analisa carteira de investimentos
+- Não realiza investimentos/compras
+- Não toma decisões financeiras pelo usuário
+- Não acessa automaticamente contas bancárias ou cartões
+- Não atua como autoridade fiscal
