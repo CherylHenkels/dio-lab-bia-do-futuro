@@ -50,21 +50,19 @@ Acessível e informal
 flowchart TD
     A["Usuário"] -->|Mensagem| B["Interface Visual (chat)"]
     B --> C["LLM"]
-    C --> |Busca| D["Base de Conhecimento"]
+    C --> |Busca com SQL| D["Base de Conhecimento"]
     D --> |Retorna dados| C
     C --> |Analisa dados| E["Resposta"]
 ```
 
 ### Componentes
 
-`TODO: Definir os componentes`
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [Streamlit/ widgets] |
-| LLM | [GPT-4 / Llama] |
-| Base de Conhecimento | [JSON/CSV com dados do cliente] |
-| Validação | [Checagem de alucinações] |
+| Interface | [Streamlit] |
+| LLM | [gpt-4.1-mini] |
+| Base de Conhecimento | [CSV com dados das transações do cliente] |
 
 ---
 
@@ -72,10 +70,9 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento]
+- [x] [ex: Agente só responde com base nos dados fornecidos]
+- [x] [ex: Quando não sabe, admite e redireciona]
+- [x] [ex: Não faz recomendações de gastos ou investimentos]
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
