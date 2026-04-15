@@ -2,30 +2,33 @@
 
 Esta pasta contém o código do seu agente financeiro.
 
-## Estrutura Sugerida
+## Estrutura
 
 ```
 src/
-├── app.py              # Aplicação principal (Streamlit/Gradio)
-├── agente.py           # Lógica do agente
-├── config.py           # Configurações (API keys, etc.)
-└── requirements.txt    # Dependências
+└── app.py              # Aplicação principal (Streamlit)
 ```
 
-## Exemplo de requirements.txt
+## Bibliotecas a serem instaladas
 
 ```
+pandas
+duckdb
 streamlit
 openai
-python-dotenv
+
 ```
 
-## Como Rodar
+Para instalar as bibliotecas basta dar o comando
 
 ```bash
 # Instalar dependências
-pip install -r requirements.txt
+pip install nome_biblioteca
+```
 
+## Como rodar a aplicação
+
+```bash
 # Rodar a aplicação
-streamlit run app.py
+streamlit run src/app.py
 ```

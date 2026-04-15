@@ -1,5 +1,3 @@
-import streamlit as st
-
 ############ Fiscal da Fatura ############
 
 
@@ -86,7 +84,7 @@ Schema da tabela df_transacoes:
   - 'entrada' = dinheiro que entrou
   - 'saida' = dinheiro que saiu
 
-Sua tarefa é gerar uma query SQL que busque os dados necessários para responder a pergunta do cliente. O dialeto do SQL deve ser DuckDB.
+Sua tarefa é gerar uma query SQL que busque os dados necessários para responder a pergunta do cliente. 
 
 Regras:
 - Retorne apenas um JSON válido no formato:
